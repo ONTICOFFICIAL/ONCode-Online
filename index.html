@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1020">
+    <title>ONCode Online 0.2 | ON TIC</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">ON</span>
+        <div>
+          <strong>ONCode Online <span class="version">0.2</span>
+        </strong>
+        <small>Uma linguagem da ON TIC</small>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button id="openBtn" class="button secondary">Abrir .on</button>
+      <button id="saveBtn" class="button secondary">Guardar .on</button>
+      <button id="runBtn" class="button run">▶ Executar</button>
+    </div>
+  </header>
+  <main class="workspace">
+    <section class="panel editor-panel">
+      <div class="panel-heading">
+        <div>
+          <span class="dot">
+          </span>
+          <h1>Editor ONCode</h1>
+        </div>
+        <span class="file-label" id="fileLabel">programa.on</span>
+      </div>
+      <p class="hint">Escreve o teu código, escolhe um exemplo ou executa a aplicação. O editor mostra números de linha e cores de sintaxe.</p>
+      <div class="editor-tools">
+        <label for="exampleSelect">Exemplos:</label>
+        <select id="exampleSelect">
+          <option value="starter">Demonstração completa</option>
+          <option value="hello">Olá mundo</option>
+          <option value="buttons">Botões interativos</option>
+          <option value="image">Texto e imagem</option>
+          <option value="newcommands">Novos comandos 0.2</option>
+        </select>
+        <button id="loadExampleBtn" class="mini-button">Carregar</button>
+        <button id="clearCodeBtn" class="mini-button danger">Limpar código</button>
+      </div>
+      <div class="code-shell">
+        <div id="lineNumbers" class="line-numbers" aria-hidden="true">1</div>
+        <div class="code-stack">
+          <pre id="highlightLayer" class="highlight-layer" aria-hidden="true">
+          </pre>
+          <textarea id="codeEditor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Editor de código ONCode">
+          </textarea>
+        </div>
+      </div>
+      <div class="editor-footer">
+        <span id="lineCount">1 linha</span>
+        <span id="cursorPos">Linha 1, coluna 1</span>
+        <span>Extensão: <strong>.on</strong>
+      </span>
+    </div>
+  </section>
+  <section class="panel preview-panel">
+    <div class="panel-heading">
+      <div>
+        <span class="dot preview-dot">
+        </span>
+        <h2>Pré-visualização</h2>
+      </div>
+      <button id="clearBtn" class="text-button">Limpar resultado</button>
+    </div>
+    <div id="status" class="status">Pronto para executar.</div>
+    <div id="preview" class="preview" aria-live="polite">
+      <div class="welcome">
+        <div class="welcome-icon">ON</div>
+        <h3>Bem-vindo à ONCode Online</h3>
+        <p>Escreve código à esquerda e carrega em <strong>Executar</strong>.</p>
+      </div>
+    </div>
+    <section class="errors-wrap">
+      <div class="console-heading">
+        <h3>Consola de execução</h3>
+        <button id="clearConsoleBtn" class="text-button">Limpar consola</button>
+      </div>
+      <pre id="errors" class="errors">Sem erros.</pre>
+    </section>
+  </section>
+</main>
+<footer>
+  <span>ON TIC © 2026</span>
+  <span>ONCode Online 0.2 · Versão experimental</span>
+</footer>
+<input id="fileInput" type="file" accept=".on,.txt" hidden>
+<script src="script.js">
+</script>
+</body>
+</html>
